@@ -1,0 +1,66 @@
+// Place all the styles related to the tasks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+li {
+    list-style-type: none;
+    text-decoration: none;
+    color: rgba(23,41,74,0.7);
+    font-style: italic;
+}
+
+li a{
+    text-decoration: none;
+    color: rgba(23,41,74,0.7);
+    font-style: italic;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+  color: black;
+}
+
+* {
+    color: rgb(17,7,41);
+    background: pink;
+}
+
+
+
+#completed-list > li {
+    list-style-type: disc;
+}
+
+.form {
+    display: flex;
+    text-align: left;
+}
+
+#incompleted {
+    flex-direction: row;
+    padding-left: 140px;
+    padding-right: 100px;
+}
+
+#completed {
+    flex-direction: row;
+    padding-left: 60px;
+}
+
+.top {
+    text-align: center;
+    padding-bottom: 10px;
+    h1{
+        margin:0px;
+    }
+}
+.bottom {
+    padding-left: 140px;
+    padding-top: 30px;
+}
+
+.others {
+   text-align: center;
+}

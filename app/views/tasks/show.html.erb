@@ -1,0 +1,17 @@
+<div class="others">
+    <h1><%=  @task.title %></h1>
+          <h2><%= @task.details %></h2>
+    <button type="button" class="btn btn-secondary"><%= link_to "Edit this task", edit_task_path(@task) %></button>
+    <button type="button" class="btn btn-secondary"><%= link_to "Delete", task_path(@task),
+          method: :delete,
+          data: { confirm: "Delete #{@task.title}?" } %></button>
+    <div class="link">
+    <%= link_to "Back to list", tasks_path %>
+    </div>
+</div>
+<!--     <li>
+    <% if @task.completed == true %>
+        <input type="checkbox" checked>The task is completed
+    <% else %>
+        <input type="checkbox" >The task is not completed yet
+    <% end %></li> -->

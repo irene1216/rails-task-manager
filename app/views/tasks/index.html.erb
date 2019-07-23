@@ -1,0 +1,35 @@
+<div class="top">
+<h1>My Tasks 👩‍💻</h1>
+</div>
+<div class="form">
+    <div id="incompleted">
+        <h1>Incomplete Tasks</h1>
+        <%= form_tag(complete_tasks_path, method: :put)  do %>
+            <% for task in @incomplete_tasks %>
+                <ul>
+                  <li>
+                    <%= check_box_tag 'task_id[]', task.id %>
+                    <%= link_to task.title, task_path(task[:id]) %>
+                  </li>
+                </ul>
+              <% end %>
+              <button type="submit_tag" class="btn btn-outline-secondary">Mark as Complete 😎</button>
+
+        <% end %>
+    </div>
+
+    <div id="completed">
+        <h1>Completed Tasks</h1>
+        <ul id="completed-list">
+        <% for task in @complete_tasks %>
+          <li>
+              <%= link_to task.title, task_path(task[:id]) %>
+          </li>
+        <% end %>
+        </ul>
+    </div>
+</div>
+
+<button class="btn btn-outline-secondary">
+    <%= link_to "+ Add a new task 🥶", new_task_path %>
+</button>
